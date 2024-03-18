@@ -26,7 +26,7 @@ stdenv.mkDerivation rec {
     mkdir -pv $out/share/java $out/bin
     cp ${src} $out/share/java/${pname}.jar
 
-    makeWrapper ${jre}/bin/java $out/bin/fx-demo \
+    makeWrapper ${jre}/bin/java $out/bin/kurtama-client \
       --add-flags "-jar $out/share/java/${pname}.jar" \
       --set _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on' \
       --set _JAVA_AWT_WM_NONREPARENTING 1
