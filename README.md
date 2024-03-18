@@ -38,4 +38,6 @@ TODO
 ### Kurtama Client
 > Package name: `kurtama-client`
 
-The client of the first implementation of the well known board game Kurtama.
+[![Build Status](https://github.com/schlunzis/nix-channel/actions/workflows/kurtama-client-build-status.yml/badge.svg)](https://github.com/schlunzis/nix-channel/actions/workflows/kurtama-client-build-status.yml)
+
+The client of the first implementation of the well known board game [Kurtama](https://github.com/schlunzis/Kurtama).
