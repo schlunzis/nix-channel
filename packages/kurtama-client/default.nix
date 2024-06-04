@@ -45,9 +45,13 @@ stdenv.mkDerivation rec {
   '';
 
   desktopItem = makeDesktopItem {
-    name = "kurtama-client";
+    name = "Kurtama";
     exec = "kurtama-client";
     icon = "kurtama-client";
+    terminal = false;
+    type = "Application";
+    categories = [ "Game" ];
+    startupWMClass = "org.schlunzis.kurtama.client.fx.ClientApp";
     desktopName = "Kurtama";
     genericName = "Kurtama";
   };
