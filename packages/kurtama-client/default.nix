@@ -11,19 +11,19 @@ in
 
 stdenv.mkDerivation rec {
   pname = "kurtama-client";
-  kurtama-version = "0.0.1-alpha+20240603112143";
+  kurtama-version = "0.0.1-alpha+20240722131510";
   version = "${kurtama-version}";
 
   jar = fetchurl {
     url = "https://github.com/schlunzis/Kurtama/releases/download/v${kurtama-version}/kurtama-client-${kurtama-version}-linux.jar";
-    hash = "sha256-YSrttCIAHWts6faNRLZoCdjypwf9SBme6TCzK2fpkUo=";
+    hash = "sha256-S8FgHLQFPrCvbg38Bro7M/B7iYHzm8i1jl1+kSN8rV8=";
   };
 
   src = fetchFromGitHub {
     owner = "schlunzis";
     repo = "Kurtama";
     rev = "v${version}";
-    hash = "sha256-sJl+zzXGKWzmuTqwYfVoSIeiyv/2PVeAZ/JqUp1G5M4=";
+    hash = "sha256-1lam3rVN3broVdqPON6EZsfzBYghpJNjBHqeNEsGbV0=";
   };
 
   dontUnpack = true;
