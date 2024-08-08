@@ -5,7 +5,7 @@ in
 , fetchurl ? pkgs.fetchurl
 , fetchFromGitHub ? pkgs.fetchFromGitHub
 , makeWrapper ? pkgs.makeWrapper
-, jdk21 ? pkgs.jdk21
+, jdk ? pkgs.jdk22
 , makeDesktopItem ? pkgs.makeDesktopItem
 }:
 
@@ -34,7 +34,7 @@ stdenv.mkDerivation rec {
         mkdir -pv $out/share/java $out/bin
         cp ${jar} $out/share/java/${pname}.jar
 
-        makeWrapper ${jdk21}/bin/java $out/bin/kurtama-client \
+        makeWrapper ${jdk}/bin/java $out/bin/kurtama-client \
         --add-flags "-jar $out/share/java/${pname}.jar" \
         --set _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on' \
         --set _JAVA_AWT_WM_NONREPARENTING 1
